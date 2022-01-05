@@ -33,10 +33,11 @@ namespace deletefile_sftp
                 client.Connect();
 
                 // รับค่าจากแป้นพิมพ์
-                var input = Convert.ToString(Console.ReadLine()); 
+                var input = Convert.ToString(Console.ReadLine());
                 //  var path = "/public_html/wp-content/uploads/";
 
                 //ถ้าเจอ folder นี้ให้ไปเรียกใช้ฟังชั่น ShowFiles 
+                //if (client.Exists(path + input))
                 if (client.Exists(input))
                 {
                     var serverFolder = input;
